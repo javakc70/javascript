@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun() {
+				//数据验证是否成功：true表示成功，false表示用户输入有错误 
+				var flag = true;
+				//验证数据 
+				//账号验证：3-6 位字母、数字、下划线 
+				var id = document.getElementById("id").value;
+				var patrn = /^[a-zA-Z0-9_]{3,6}$/;
+				console.log(patrn.exec(id));
+				if(patrn.exec(id)) {
+					//设置提示信息为黑色 
+					document.getElementById("err_id").style.color = 'black';
+				} else {
+					//设置提示信息为红色 
+					document.getElementById("err_id").style.color = 'red';
+					flag = false;
+					
+				}
+
+				//年龄验证：1-99 的数字 
+				var age = document.getElementById("age").value;
+				var patrn = /^[1-9][0-9]?$/;
+				if(patrn.exec(age)) {
+					//设置提示信息为黑色 
+					document.getElementById("err_age").style.color = 'black';
+				} else {
+					//设置提示信息为红色 
+					document.getElementById("err_age").style.color = 'red';
+					flag = false;
+					
+				}
+
+				//邮箱验证：正确的邮箱格式 
+				var mail = document.getElementById("mail").value;
+				var patrn = /^[a-zA-Z0-9_\-]{1,}@[a-zA-Z0-9_\-]{1,}\.[a-zA-Z0-9_\-.]{1,}$/;
+
+				if(patrn.exec(mail)) {
+					//设置提示信息为黑色 
+					document.getElementById("err_mail").style.color = 'black';
+				} else {
+					//设置提示信息为红色 
+					document.getElementById("err_mail").style.color = 'red';
+					flag = false;
+					
+				}
+
+				//用户输入没有错误，表单提交 
+				if(flag) {
+					alert("输入正确！提交");
+					//action
+					document.forms[0].submit();
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" target="" method="get">
+			<table>
+				<tr>
+					<td>账号</td>
+					<td>
+						<input type="text" id="id" name="id" />
+					</td>
+					<td id="err_id">
+						3-6 位字母、数字、下划线
+					</td>
+				</tr>
+				<tr>
+					<td>年龄</td>
+					<td>
+						<input type="text" id="age" name="age" />
+					</td>
+					<td id="err_age">
+						1-99 的数字
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td>
+						<input type="text" id="mail" name="mail" />
+					</td>
+					<td id="err_mail">
+						正确的邮箱格式
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="button" value="提交" onclick="fun();" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

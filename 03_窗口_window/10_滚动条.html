@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f_open(){
+				window.scrollBy(0,100);
+			}
+			
+			function f_open2(){
+				//console.log(window.scrollY);
+				window.scrollTo(0,20*50);
+			}
+			
+			//页面加载完成后执行，生成1-100数字
+			function f(){
+				var html="";
+				for(i=1;i<=100;i++){
+					html+="<div>"+i+"</div>";
+				}
+				document.getElementById("info").innerHTML=html;
+			}
+		</script>
+	</head>
+	<body onload=f() onclick="f_open()">
+		<input type="button" onclick="f_open2()" value="滚动条">
+		<div id="info">
+			
+		</div>
+	</body>
+</html>

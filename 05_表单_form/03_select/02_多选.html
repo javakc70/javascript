@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(){
+				var selectObj=document.getElementById("grade");
+				for(i=0;i<selectObj.options.length;i++){
+					//判断每一个option，是否被选中，如果被选中，selected的值：true
+					if(selectObj.options[i].selected){
+						var s=" 下标:"+i+
+						"， 文本:"+selectObj.options[i].text+
+						"， 值:"+selectObj.options[i].value;
+						
+						console.log(s);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<select id="grade" size="5" onclick="f()" multiple>
+			<option value="0">请选择</option>
+			<option value="one" selected>一年级</option>
+			<option value="two">二年级</option>
+			<option value="three">三年级</option>
+		</select>
+	</body>
+</html>

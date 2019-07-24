@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<script>
+			function fun1() {
+				//创建新窗口
+				newWin=window.open("08_newwindow.html", 
+				"新窗口的名字", 
+				"height=300,width=400,top=300,left=300,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+				//
+				interval=window.setInterval("fun_move()",200);
+			}
+			
+			var x=20,y=20;
+			function fun_move(){
+				//判断是否到了边界
+				console.log(newWin.screenLeft+","+newWin.screenTop);
+				if( newWin.screenLeft==0){
+					x=-x;
+				}else if(newWin.screenTop>360 ){
+					y=-y;
+				}else if(newWin.screenTop==0 ){
+					y=-y;
+				}else if(newWin.screenLeft>=950){
+					x=-x;
+				}
+		
+				
+				newWin.moveBy(x,y);
+				
+				if(newWin.closed){
+					window.clearInterval(interval);
+				}
+			}
+											
+		</script>
+	</head>
+
+	<body>
+
+		<input type="button" value="按钮" id="name" onclick="fun1()" />
+
+	</body>
+
+</html>

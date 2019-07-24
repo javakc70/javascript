@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f1(){
+				var v2=document.getElementById("txt2").value;
+				window.opener.document.getElementById("txt1").value=v2;
+			}
+			function f_close(){
+				window.close();
+			}
+		</script>
+	</head>
+	<body>
+		<h2>new window</h2>
+		<input type="button" onclick="f1()" value="把值传回去">
+		<input type="button" onclick="f_close()" value="关闭窗口">
+		<input type="text" id="txt2">
+		
+	</body>
+</html>

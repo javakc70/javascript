@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+        	
+        	<!--作者：c    时间：2019-04-02
+        	描述：设计一个学生信息录入的form表单
+
+要求如下： 
+form中的组件有：姓名，出生日期，学历，毕业学校，专业 
+姓名：使用输入框实现，要求只能输入2-4位中文（提示，使用正则表达式验证） 
+出生日期：使用type=date实现， 
+学历：使用下拉菜单实现，选项有：高中，专科，本科 
+毕业学校：使用输入框实现，要求字符数量在30字符以内 
+当学历选择为【高中】时，专业不允许填写 
+当选择出生日期后，在输入框后面显示学生年龄，年龄保留整数 
+当计算的年龄小于10岁时，提示出生日期错误 
+
+        -->
+        
+        <script language="JavaScript">
+        	function fun_education(){
+        		//得到学历的下拉列表
+        		var sel=document.getElementById("education");
+        		//取得用户选择的学历 (下标)
+        		var i=sel.selectedIndex;
+        		if(sel.options[i].value=="1"){
+        			document.getElementById("major").disabled=true;
+        		}else{
+        			document.getElementById("major").disabled=false;
+        			
+        		}
+        	}
+        	function fun_birthday(){
+        		//取得日期组件的值，是一个字符串类型（2019-04-28）
+        		v=document.getElementById("date").value;
+        		//取得当前日期的值
+        		d1=new Date();
+        		
+        		//拆分用户选择的日期值，得到一个数组，有三个元素；2019 04 28
+        		var arr=v.split("-");
+        		//通过年月日三个值，创建日期对象
+        		d2=new Date(arr[0],arr[1],arr[2]);
+        		
+        		//取得日期对象的毫秒数，相减，得到学生的年龄（毫秒数）
+        		var a=parseInt(d1.getTime()-d2.getTime())/1000;
+        		//将学生年龄(秒数)，转换成年
+        		var y=parseInt(a/(3600*24*365));
+        		
+        		//展示
+        		document.getElementById("age").value=y;
+        		//判断是否小于10岁
+	    		if(y<10){
+	    		  	alert("出生日期错误!");
+	    		}
+        	}
+        </script>
+	</head>
+	<body>
+		<form1>
+			<table>
+				<tr>
+					<td>姓名：</td>
+					<td><input type="text" name="name" pattern="^[\u4e00-\u9fa5]{2,4}$" required 
+						oninvalid="setCustomValidity('只能输入2-4位中文')"
+						oninvalid="setCustomValidity('')"/></td>
+						
+				</tr>
+			<tr>
+					<td>性别：</td>
+					<td>
+						<select name="sex">
+							<option value="0">请选择</option>
+							<option value="1">男</option>
+							<option value="2">女</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>出生日期：</td>
+					<td>
+						<input type="date" id="date" min="1988-01-01" max="2019-12-31" onchange="fun_birthday()"/>
+					</td>
+				</tr>
+				<tr>
+					<td>年龄：</td>
+					<td>
+						<input type="text" id="age" value="0"/>
+					</td>
+				</tr>
+				<tr>
+					<td>学历：</td>
+					<td>
+						<select id="education" onchange="fun_education()">
+							<option value="0">请选择</option>
+							<option value="1">高中</option>
+							<option value="2">专科</option>
+							<option value="3">本科</option>
+							<option value="4">研究生</option>
+                      </select>
+					</td>
+				</tr>
+				<tr>
+					<td>专业：</td>
+					<td><input type="text" id="major"  /></td>
+				</tr>
+				<tr>
+					<td>毕业学校：</td>
+					<td><input type="text" name="school"  pattern="^[\u4e00-\u9fa5]{1,30}" required oninvalid="setCustomValidity('要求字符数量在30字符以内')"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="提交"></td>
+				</tr>
+				
+		</form>	
+	</body>
+</html>

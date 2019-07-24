@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.outterDiv{
+				width:300px;
+				height:300px;
+				border: 1px solid red;
+				position: absolute;
+			}
+			.innerDiv{
+				width:20px;
+				height:20px;
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				
+			}
+			.btnDiv{
+				position: absolute;
+				top: 325px;
+				left: 0%;
+				
+			}
+		</style>
+		<script>
+			var v_top=10;
+			var v_left=0;
+			
+			var x=5,y=5;
+			var score=0;
+			
+			function fun(){
+				score++;
+				document.getElementById("score").innerText=score;
+				console.log(v_left+","+v_top);
+				var div=document.getElementById("innerDiv");
+				
+				if( v_top>280 || v_left>280 || v_top<=0 ||v_left<0){
+					window.clearInterval(interval);
+					
+				}
+				
+				v_left+=x;
+				v_top+=y;
+				//修改div的样式
+				div.style.top=v_top+'px';
+				div.style.left=v_left+'px';
+			}
+			
+			function fun2 () {
+				interval=window.setInterval("fun()",100);
+			}
+			function fun3 () {
+				var r=Math.random();
+				if( r<0.25){
+					y=-y;
+				}else if(  r<0.5){
+					x=-x;
+				}else if(  r<0.75){
+					y=-y;
+				}else{
+					x=-x;
+				}
+			}
+		</script>
+	</head>
+	<body onload="fun2()">
+		<div class="outterDiv">
+			<div id="innerDiv" class="innerDiv">
+				<img src="../img/circle.png" onclick='fun3()' style="cursor: pointer;"/>
+			</div>
+		</div>
+		<div class="btnDiv">
+			<input type='button' onclick="fun2()" value='开始'>
+			<input type='button' onclick="window.clearInterval(interval)" value='停止'>
+			<span id="score"></span>
+		</div>
+		
+	</body>
+</html>

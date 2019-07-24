@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			class Student{
+				constructor(){
+					console.log('创建了一个学生对象');
+					this.name='学生姓名';
+					this.age=10;
+				}
+				sing(){
+					console.log('让我们荡起双桨');
+				}
+				static swim(){
+					console.log('游泳');
+				}
+			}
+			
+			function fun(){
+				var s=new Student();
+				s.name="张三";
+				console.log(s.name);
+				console.log(s.age);
+				s.sing();
+				Student.swim();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮" onclick="fun()">
+	</body>
+</html>

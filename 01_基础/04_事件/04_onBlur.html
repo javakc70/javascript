@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.err{
+				border: 1px solid red;
+			}
+		</style>
+		<script language="JavaScript">
+			//验证数据
+			function f_loginName() {
+				var  loginName=document.getElementById("loginName").value;
+				if(loginName==''){
+					document.getElementById("loginName").className="err";
+				}else{
+					document.getElementById("loginName").className="";
+				}
+			}
+			function f_password() {
+				var  password=document.getElementById("password").value;
+				var  password2=document.getElementById("password2").value;
+				
+				if(password!=password2){
+					document.getElementById("password").className="err";
+					document.getElementById("password2").className="err";
+				}else{
+					document.getElementById("password").className="";
+					document.getElementById("password2").className="";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<form id="loginForm">
+			<table>
+				<tr>
+					<td>登录名</td>
+					<td><input type="text" id="loginName" name="loginName"  onblur="f_loginName()"></td>
+				</tr>
+				
+				<tr>
+					<td>密码</td>
+					<td><input type="text" id="password" name="password" onblur="f_password()"></td>
+				</tr>
+				
+				<tr>
+					<td>确认密码</td>
+					<td><input type="text" id="password2" name="password2" onblur="f_password()"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td><input type="button" value="注册"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

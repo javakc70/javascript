@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(o){
+				//取得下拉列表中的option元素（共3个）
+				arr=o.options;
+				//循环Option元素
+				for(i=0;i<arr.length;i++){
+					//判断Option元素是否被选中
+					if(arr[i].selected){
+						//输入Option元素的文本和值
+						console.log(arr[i].text+ " ,"+ arr[i].value);
+					}
+				}
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<form name="myForm">
+			<select multiple size="5" name="box" style="width:150" onClick="f(this);">
+				<option value="apple">苹果</option>
+				<option value="orange">橘子</option>
+				<option value="banana">香蕉</option>
+			</select>
+
+		</form>
+
+	</body>
+
+</html>

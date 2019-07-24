@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun(){
+				var x=document.getElementById("txt1").value;
+				var y=document.getElementById("txt2").value;
+				
+				//将字符串转换成数字
+				x=parseInt(x);
+				y=parseInt(y);
+				
+				document.getElementById("result").innerHTML=x+y;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1">
+		<input type="text" id="txt2">
+		<div id="result">结果</div>
+		<input type='button' value="加法" onclick="fun()">
+	</body>
+</html>

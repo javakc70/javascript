@@ -1,0 +1,2 @@
+git remote add origin https://github.com/javakc70/javascript.git
+git push -u origin master

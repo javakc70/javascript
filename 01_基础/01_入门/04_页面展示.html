@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script language="JavaScript">
+			//函数
+			function fun(){
+				document.getElementById("info").innerHTML="你想展示的内容";
+			}
+			function fun2(){
+				document.getElementById("info").innerHTML="<img src='../../img/ajax.jpg' />";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="info">div</div>
+		<input type="button" value="按钮" onclick="fun();">
+		<input type="button" value="加载图片" onclick="fun2();">
+	</body>
+</html>
+

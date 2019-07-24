@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f_open(){
+				window.open("08_newwindow.html");
+			}
+			
+			function f_open2(){
+				newWin=window.open("08_newwindow.html", 
+				"新窗口的名字", 
+				"height=300,width=400,top=300,left=300,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+			}
+			
+			function f_close(){
+				newWin.close();
+			}
+			
+			function f_moveBy(){
+				newWin.moveBy(10,10);
+			}
+			
+			function f_moveTo(){
+				newWin.moveTo(100,100);
+			}
+			
+			function f_resizeBy(){
+				newWin.resizeBy(10,10);
+			}
+			
+			function f_resizeTo(){
+				newWin.resizeTo(500,500);
+			}
+			
+			function f1(){
+				var v1=window.document.getElementById('txt1').value;
+				newWin.document.getElementById('txt2').value=v1;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="info"></div>
+		<input type="button" onclick="f_open()" value="打开新窗口">
+		<input type="button" onclick="f_open2()" value="打开新窗口">
+		<input type="button" onclick="f_close()" value="关闭新窗口">
+		<input type="button" onclick="f_moveBy()" value="移动新窗口">
+		<input type="button" onclick="f_moveTo()" value="新窗口移动到">
+		<input type="button" onclick="f_resizeBy()" value="新窗口调整大小">
+		<input type="button" onclick="f_resizeTo()" value="新窗口调整大小">
+		
+		<input type="button" onclick="f1()" value="向新窗口传值">
+	
+		<input type="text" id="txt1">
+	</body>
+</html>

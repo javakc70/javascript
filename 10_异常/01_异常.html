@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun(){
+				try{
+					document.getElementById('id').value=100;
+				}catch(e){
+					alert("没有此元素"+e);
+				}finally{
+					alert("程序结束了");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="按钮" onclick="fun()">
+		<input id="id">
+	</body>
+</html>

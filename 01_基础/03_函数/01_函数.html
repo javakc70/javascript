@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+		<script>
+			function fun1(){
+				//调用测试函数
+				var max=fun_max(10,20);
+				console.log(max);
+			}
+			//定义一个函数：比较两个数字的大小，返回较大的一个
+			function fun_max(x,y){
+				if(x>y){
+					return x;
+				}else {
+					return y;
+				}
+			}
+			
+			function fun2(){
+				//调用测试函数
+				var max=fun_max("Lucy","Lily");
+				console.log(max);
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type='button' value="按钮1" onclick="fun1()">
+		<input type='button' value="按钮2" onclick="fun2()">
+	</body>
+
+</html>

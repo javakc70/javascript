@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script language="JavaScript">
+			//定义变量
+			var x=10;
+			var y=20;
+			//函数
+			function fun_write(){
+				document.write(x+y);
+			}
+			function fun_console(){
+				console.log(x+y);
+			}
+			function fun_div(){
+				document.getElementById("info").innerHTML=x+y;
+			}
+			function fun_alert(){
+				alert(x+y);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="info">div</div>
+		<input type="button" value="write" onclick="fun_write();">
+		<input type="button" value="console" onclick="fun_console();">
+		<input type="button" value="div" onclick="fun_div();">
+		<input type="button" value="alert消息框" onclick="fun_alert();">
+	</body>
+</html>
+

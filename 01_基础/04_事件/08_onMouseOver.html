@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table{
+			width:300px;
+			height:200px;
+			border-collapse:collapse;
+			border:solid blue;
+			border-width:1px 0px 0px 1px;
+		}
+		td{
+			border:solid blue;
+			border-width:0px 1px 1px 1px;
+		}
+		</style>
+		<script language="JavaScript">
+			function f(o) {
+				o.style.background="#FF0000";
+			}
+			function f2(o) {
+				o.style.background="";
+			}
+		</script>
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+			</tr>
+			<tr>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+			</tr>
+			<tr>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+				<td onMouseOver="f(this)" onMouseOut="f2(this)" ></td>
+			</tr>
+		</table>
+	</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			table{
+			width:300px;
+			height:200px;
+			border-collapse:collapse;
+			border:solid blue;
+			border-width:1px 0px 0px 1px;
+		}
+		th,td{
+			border:solid blue;
+			border-width:0px 1px 1px 1px;
+		}
+		
+
+			
+		</style>
+		<script language="JavaScript">
+			function f(o) {
+				if(o.style.background){
+					o.style.background="";
+				}else{
+					o.style.background="#FF0000";
+				}
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<table border="">
+			<tr>
+				<td onclick="f(this)"></td>
+				<td onclick="f(this)"></td>
+				<td onclick="f(this)"></td>
+			</tr>
+			<tr>
+				<td onclick="f(this)"></td>
+				<td onclick="f(this)"></td>
+				<td onclick="f(this)"></td>
+			</tr>
+			<tr>
+				<td onclick="f(this)"></td>
+				<td onclick="f(this)"></td>
+				<td onclick="f(this)"></td>
+			</tr>
+		</table>
+	</body>
+
+</html>

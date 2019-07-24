@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.outterDiv{
+				width:300px;
+				height:300px;
+				border: 1px solid red;
+				position: absolute;
+			}
+			.innerDiv{
+				width:10px;
+				height:10px;
+				border: 1px solid blue;
+				position: absolute;
+				top: 0%;
+				left: 0%;
+			}
+		</style>
+		<script>
+			var v_top=0;
+			var v_left=0;
+			function fun(){
+				console.log(event.keyCode);
+				var div=document.getElementById("innerDiv");
+				//判断按键
+				if(event.keyCode==38 || event.keyCode==87){
+					//上
+					v_top-=5;
+				}else if(event.keyCode==40 || event.keyCode==83){
+					//下
+					v_top+=5;
+				}else if(event.keyCode==37 || event.keyCode==65){
+					//左
+					v_left-=5;
+				}else if(event.keyCode==39 || event.keyCode==68){
+					v_left+=5;
+				}
+				//修改div的样式
+				div.style.top=v_top+'px';
+				div.style.left=v_left+'px';
+			}
+		</script>
+	</head>
+	<body onkeydown="fun()">
+		<div class="outterDiv">
+			<div id="innerDiv" class="innerDiv">
+			</div>
+		</div>
+	</body>
+</html>

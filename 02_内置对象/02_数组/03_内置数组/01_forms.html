@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun(){
+				var s=document.getElementById("txt_name").value;
+				if(s=="" ){
+					alert("请输入姓名：");
+					return;
+				}
+				document.forms[0].submit();
+				alert("提交成功");
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type='text' id="txt_name" name="txt_name">
+			<br />
+			<input type="button" value="提交" onclick="fun()">
+		</form>
+		
+	</body>
+</html>

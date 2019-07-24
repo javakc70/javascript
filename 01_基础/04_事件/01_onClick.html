@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--缩进
+        	描述：循环1-100，单数次输出“好好学习！”，偶数次输出“天天向上！”-->
+		<script language="JavaScript">
+			function f() {
+				//验证数据
+				var  loginName=document.getElementById("loginName").value;
+				if(loginName==''){
+					alert("请输入登陆名");
+					return;
+				}
+				
+				var  password=document.getElementById("password").value;
+				var  password2=document.getElementById("password2").value;
+				
+				if(password!=password2){
+					alert("两次密码输入不一致");
+					return;1
+				}
+				
+				document.getElementById("loginForm").submit();
+			}
+		</script>
+	</head>
+
+	<body>
+		<form id="loginForm">
+			<table>
+				<tr>
+					<td>登录名</td>
+					<td><input type="text" id="loginName" name="loginName"></td>
+				</tr>
+				
+				<tr>
+					<td>密码</td>
+					<td><input type="password" id="password" name="password"></td>
+				</tr>
+				
+				<tr>
+					<td>确认密码</td>
+					<td><input type="password" id="password2" name="password2"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td><input type="button" value="注册" onclick="f()"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

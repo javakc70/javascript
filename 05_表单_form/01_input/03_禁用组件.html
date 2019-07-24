@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(){
+				document.getElementById("txt").disabled=true;
+				document.getElementById("btn1").disabled=true;
+			}
+			function f2(){
+				document.getElementById("txt").disabled=false;
+				document.getElementById("btn1").disabled=false;
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input id="txt"/>
+			<input type="button" id="btn1" value="禁用" onclick="f()">
+			<input type="button" id="btn2" value="可用" onclick="f2()">
+		</form>
+	</body>
+</html>

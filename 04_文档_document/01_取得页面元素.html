@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(){
+				//1 通过id
+				inputObj=document.getElementById("txt");
+				//2 通过表单的name和组件的name
+				inputObj=document.myForm.userName;
+				//3 通过组件的name
+				inputObj=document.getElementsByName("userName")[0];
+				//4 通过组件的class
+				inputObj=document.getElementsByClassName("sty")[0];
+				//5 通过元素的名字
+				inputObj=document.getElementsByTagName("input")[0];
+				//6 通过组件的name
+				inputObj=document.all.userName;
+				
+				inputObj.value="javakc";
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myForm"> 
+			<input type="text" id="txt" class="sty">
+			<input type="button" id="btn" value="按钮" onclick="f()">
+		</form>
+	</body>
+</html>

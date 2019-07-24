@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>局部变量、全局变量</title>
+		<script>
+			function f1(){
+				m=10;//全局变量
+				var n=10;//局部变量
+			}
+			function f2(){
+				console.log("全局变量:"+m);
+				console.log("局部变量:"+n);
+			}
+		</script>
+	</head>
+	<body>
+		<input type='button' value="声明变量" onclick="f1()">
+		<input type='button' value="访问变量" onclick="f2()">
+	</body>
+</html>

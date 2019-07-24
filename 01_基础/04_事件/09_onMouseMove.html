@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:300px;
+				height:300px;
+				border: 1px solid red;
+			}
+		</style>
+		<script type="text/javascript">
+			function f(){
+				//console.log(event.x);
+				document.getElementById("info").innerHTML=event.x+","+event.y
+			}
+		</script>
+	</head>
+	<body >
+		<div id="info" onmousemove="f()"></div>
+	</body>
+</html>

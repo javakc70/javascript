@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var n=0;
+			//开始定时任务
+			function f_start(){
+				//创建定时器，将定时器对象赋值给myInterval
+				myInterval=window.setInterval("task()",1000);
+			}
+			//定时任务
+			function task(){
+				console.log(n++);
+				document.getElementById("info").innerHTML=new Date();
+				if(n==20){
+					//停止定时器
+					window.clearInterval(myInterval);
+				}
+			}
+			
+			function f_close(){
+				window.clearInterval(myInterval);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="f_start()" value="开启定时器">
+		<input type="button" onclick="f_close()" value="停止定时器">
+		<div id="info"></div>
+	</body>
+</html>

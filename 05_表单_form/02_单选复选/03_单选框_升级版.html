@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(td_obj_2) {
+				//parentElement:得到父元素
+				var tr_obj = td_obj_2.parentElement;
+				//children[0]:得到第一个子元素
+				var td_obj_1 = tr_obj.children[0];
+				//children[0]:得到第一个子元素
+				var input_obj = td_obj_1.children[0];
+
+				//第一种实现
+				//input_obj.checked = !input_obj.checked;
+				//第二种实现
+				input_obj.click();
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" target="" method="get">
+			<h2>单选题:今天中午吃什么?</h2>
+			<table border=6 bgcolor="#ffffcc" rules="rows" bordercolor="#9900ff" width="400" height="160">
+				<tr>
+					<td width="20">
+						<input type="radio" name="food" />
+					</td>
+					<td onclick="f(this)">
+						A、米饭
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="food" />
+					</td>
+					<td onclick="f(this)">
+						B、面条
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="food" />
+					</td>
+					<td onclick="f(this)">
+						C、包子
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="food" />
+					</td>
+					<td onclick="f(this)">
+						D、馒头
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

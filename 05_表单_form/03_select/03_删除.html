@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(){
+				var selectObj=document.getElementById("grade");
+				var index=selectObj.selectedIndex;
+				
+				selectObj.remove(index);
+			}
+		</script>
+	</head>
+	<body>
+		<select id="grade" size="5" onclick="f()" multiple>
+			<option value="0">请选择</option>
+			<option value="one" selected>一年级</option>
+			<option value="two">二年级</option>
+			<option value="three">三年级</option>
+		</select>
+	</body>
+</html>

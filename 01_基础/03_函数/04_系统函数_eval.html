@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function fun(){
+				var s="1+2+3+4";
+				var result=eval(s);
+				console.log(result);
+			}
+		</script>
+		<input type='button' value="求和" onclick="fun()">
+		
+		
+		
+		
+		<script>
+			function fun2(){
+				var s="1<2";
+				var result=eval(s);
+				console.log(result);
+			}
+		</script>
+		<input type='button' value="比较" onclick="fun2()">
+		
+		
+		
+		
+		
+		
+		
+		<script>
+			function fun3(){
+				var s="alert('弹出消息框')";
+				eval(s);
+			}
+		</script>
+		<input type='button' value="消息框" onclick="fun3()">
+		
+		
+		
+		
+		
+		
+		<script>
+			function fun4(){
+				var s='o={name:"张三",age:20}';
+				var student=eval(s);
+				console.log(student.name);
+				console.log(student.age);
+			}
+		</script>
+		<input type='button' value="解析" onclick="fun4()">
+		
+		
+		
+		
+		
+	</body>
+</html>

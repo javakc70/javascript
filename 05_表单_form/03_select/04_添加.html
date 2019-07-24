@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f(){
+				var value=document.getElementById("txt1").value;
+				var text=document.getElementById("txt2").value;
+				
+				var opt=new Option(text,value);
+				
+				var selectObj=document.getElementById("grade");
+				selectObj.add(opt);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<select id="grade" size="5">
+			<option value="0">请选择</option>
+			<option value="one" selected>一年级</option>
+			<option value="two">二年级</option>
+			<option value="three">三年级</option>
+		</select>
+		<br />value:<input id="txt1"> text:<input id="txt2">
+		<input type="button" value="添加" onclick="f()">
+	</body>
+</html>

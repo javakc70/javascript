@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>确认框</title>
+		<script>
+			function fun(){
+				var flag=confirm("是否删除？");
+				if(flag){
+					alert("数据已删除！");
+				}else{
+					alert("取消操作！");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" onclick="fun()" value="确认框">
+		
+	</body>
+</html>

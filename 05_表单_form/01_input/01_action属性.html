@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function f() {
+				var v_url = document.getElementById("url").value;
+				switch(v_url) {
+					case '百度':
+						document.forms[0].action = "http://www.baidu.com";
+						break;
+					case '搜狐':
+						document.forms[0].action = "http://www.sohu.com";
+						break;
+					case '新浪':
+						document.forms[0].action = "http://www.sina.com";
+						break;
+					case '淘宝':
+						document.forms[0].action = "http://www.taobao.com";
+						break;
+				}
+
+				document.forms[0].submit();
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="">
+			<input type="text" id="url">
+
+			<input type="button" value="提交" onclick="f()">
+		</form>
+
+	</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+		</script>
+		<style>
+			input[type='text'],input[type='number'],input[type='email']{
+				width: 200px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<form method="get">
+			<table>
+				<tr>
+					<td>账号</td>
+					<td>
+						<input type="text" id="id" name="id" pattern="[a-zA-Z0-9_]{3,6}"
+							required oninvalid="setCustomValidity('3-6位字母、数字、下划线')"/>
+					</td>
+				</tr>
+				<tr>
+					<td>年龄</td>
+					<td>
+						<input type="number" id="age" name="age" min="1" max="99"
+							required oninvalid="setCustomValidity('1-99的数字')"/>
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td>
+						<input type="email" id="mail" name="mail" 
+							required oninvalid="setCustomValidity('正确的邮箱格式')"/>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="提交"  />
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</body>
+
+</html>

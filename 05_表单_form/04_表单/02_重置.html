@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun() {
+				var arr=document.forms[0].elements;
+				for(e of arr){
+					if(e.name!=''){
+						e.value="";
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" target="" method="get">
+			<table>
+				<tr>
+					<td>账号</td>
+					<td>
+						<input type="text" id="id" name="id" value="001"/>
+					</td>
+				</tr>
+				<tr>
+					<td>年龄</td>
+					<td>
+						<input type="text" id="age" name="age" />
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td>
+						<input type="text" id="mail" name="mail" />
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="提交" />
+						<input type="reset" value="系统重置"/>
+						<input type="button" value="自定义重置" onclick="fun()"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

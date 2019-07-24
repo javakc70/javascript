@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f() {
+				var flag=document.getElementById('r1').checked;
+				document.getElementById('r1').checked=!flag;
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" target="" method="get">
+			<h2>单选题:今天中午吃什么?</h2>
+			<table border=6 bgcolor="#ffffcc" rules="rows" 
+			bordercolor="#9900ff" width="400" height="160" >
+				<tr >
+					<td width="30">
+						<input type="radio" name="food" id='r1'/>
+					</td>
+					<td onclick="f()">
+						A、米饭
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="food" />
+					</td>
+					<td onclick="f()">
+						B、面条
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio"  name="food"/>
+					</td>
+					<td  onclick="f()">
+						C、包子
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="food" />
+					</td>
+					<td onclick="f()">
+						D、馒头
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

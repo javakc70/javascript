@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f1() {
+				console.log(window.name)
+			}
+			function f2() {
+				window.name="javakc";
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="f1()">取得窗口的name属性</button>
+		<button onclick="f2()">设置窗口的name属性</button>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun1(){
+				num=window.frames.length;
+				alert(num);
+			}
+			
+			function fun2(){
+				//document.getElementById('f1_txt').value='javakc';
+				window.f1.document.getElementById('f1_txt').value='javakc';
+				window.frames['f1'].document.getElementById('f1_txt').value='javakc';
+				window.frames[0].document.getElementById("f1_txt").value='javakc';
+			}
+		</script>
+	</head>
+	<body>
+		<iframe name="f1" src="test2/f1.html"></iframe>
+		<iframe name="f2" src="test2/f2.html"></iframe>
+		
+		<input type="button" value="有多少个子窗口" onclick="fun1()">
+		<input type="button" value="访问子窗口" onclick="fun2()">
+	</body>
+</html>

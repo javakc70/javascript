@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun1(){
+				alert(window.f1.var_f1);
+			}
+			
+			function fun2(){
+				window.f1.fun_f1();
+			}
+		</script>
+	</head>
+	<body>
+		<iframe name="f1" src="test3/f1.html"></iframe>
+		
+		<input type="button" value="访问其他窗口的变量" onclick="fun1()">
+		<input type="button" value="访问其他窗口的函数" onclick="fun2()">
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.focus{
+				border: 1px solid red;
+			}
+		</style>
+		<script language="JavaScript">
+			function f(o) {
+				o.className="focus";
+			}
+		</script>
+	</head>
+
+	<body>
+		<form id="loginForm">
+			<table>
+				<tr>
+					<td>登录名</td>
+					<td><input type="text" id="loginName" name="loginName" onfocus="f(this)"></td>
+				</tr>
+				
+				<tr>
+					<td>密码</td>
+					<td><input type="text" id="password" name="password" onfocus="f(this)"></td>
+				</tr>
+				
+				<tr>
+					<td>确认密码</td>
+					<td><input type="text" id="password2" name="password2" onfocus="f(this)"></td>
+				</tr>
+				
+				<tr>
+					<td></td>
+					<td><input type="button" value="注册"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

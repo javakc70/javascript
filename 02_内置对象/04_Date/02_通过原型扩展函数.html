@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			function f1() {
+				var d = new Date();
+				document.getElementById("info").innerHTML = d.format();
+			}
+			
+			
+			//为Date添加方法，方法名format
+			//prototype：原型
+			Date.prototype.format=function(){
+				var year = this.getYear() + 1900;
+				var month = this.getMonth() + 1;
+				var day = this.getDate();
+				var hour = this.getHours();
+				var minutes = this.getMinutes();
+				var seconds = this.getSeconds();
+
+				var s = year + "-" + month + "-" + day+' '+hour + ":" + minutes + ":" + seconds
+				return s;
+			};
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="info"></div>
+		<button onclick="f1()">调用函数</button>
+	</body>
+
+</html>

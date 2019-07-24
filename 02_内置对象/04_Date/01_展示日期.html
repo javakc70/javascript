@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function f1() {
+				var d = new Date();
+				document.getElementById("info").innerHTML = d;
+			}
+
+			function f2() {
+				var d = new Date();
+				var year = d.getFullYear() 
+				var month = d.getMonth() + 1;
+				var day = d.getDate();
+				var hour = d.getHours();
+				var minutes = d.getMinutes();
+				var seconds = d.getSeconds();
+
+				var s = year + "-" + month + "-" + day+' '+hour + ":" + minutes + ":" + seconds
+				document.getElementById("info").innerHTML = s;
+			}
+			
+			function f3() {
+				var d = new Date();
+				document.getElementById("info").innerHTML = format(d);
+			}
+			
+			function format(d){
+				var year = d.getFullYear();
+				var month = d.getMonth() + 1;
+				var day = d.getDate();
+				var hour = d.getHours();
+				var minutes = d.getMinutes();
+				var seconds = d.getSeconds();
+
+				var s = year + "-" + month + "-" + day+' '+hour + ":" + minutes + ":" + seconds
+				return s;
+			}
+			
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="info"></div>
+		<button onclick="f1()">标准时间</button>
+		<button onclick="f2()">指定格式</button>
+		<button onclick="f3()">调用函数</button>
+	</body>
+
+</html>
